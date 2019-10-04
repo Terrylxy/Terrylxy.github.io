@@ -79,13 +79,27 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="title: Hands on Machine Learning-Chapter 3date: 2019-10-01 19:52:14tags: [python, Machine Learning, Sklearn]categories: Hands on Machine Learningtoc: true  《Hands-On Machine Learning with Scikit-Learn">
+<meta property="og:type" content="article">
 <meta property="og:title" content="LXY&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/10/04/Lecture 4 Classification/index.html">
 <meta property="og:site_name" content="LXY&#39;s Blog">
+<meta property="og:description" content="title: Hands on Machine Learning-Chapter 3date: 2019-10-01 19:52:14tags: [python, Machine Learning, Sklearn]categories: Hands on Machine Learningtoc: true  《Hands-On Machine Learning with Scikit-Learn">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_16_1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_20_1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_63_1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_69_1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_73_1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_79_1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_103_1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_106_1.png">
+<meta property="og:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_108_1.png">
+<meta property="og:updated_time" content="2019-10-04T05:15:33.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LXY&#39;s Blog">
+<meta name="twitter:description" content="title: Hands on Machine Learning-Chapter 3date: 2019-10-01 19:52:14tags: [python, Machine Learning, Sklearn]categories: Hands on Machine Learningtoc: true  《Hands-On Machine Learning with Scikit-Learn">
+<meta name="twitter:image" content="http://yoursite.com/2019/10/04/Lecture%204%20Classification/output_16_1.png">
 
 
 
@@ -115,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/04/Lecture 4 Classification/">
 
 
 
 
 
-  <title>LXY's Blog</title>
+  <title> | LXY's Blog</title>
   
 
 
@@ -140,8 +154,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,159 +247,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/04/MNIST/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/04/MNIST/" itemprop="url">MNIST</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-04T01:15:18-04:00">
-                2019-10-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Machine-Learning/" itemprop="url" rel="index">
-                    <span itemprop="name">Machine Learning</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>MNIST 数据集来自美国国家标准与技术研究所, National Institute of Standards and Technology (NIST). 训练集 (training set) 由来自 250 个不同人手写的数字构成, 其中 50% 是高中学生, 50% 来自人口普查局 (the Census Bureau) 的工作人员. 测试集(test set) 也是同样比例的手写数字数据.</p>
-<p>MNIST 数据集下载地址： <a href="http://yann.lecun.com/exdb/mnist/" target="_blank" rel="noopener">http://yann.lecun.com/exdb/mnist/</a> </p>
-<p>包含如下四个部分：</p>
-<ul>
-<li>Training set images: train-images-idx3-ubyte.gz (9.9 MB, 解压后 47 MB, 包含 60,000 个样本)</li>
-<li>Training set labels: train-labels-idx1-ubyte.gz (29 KB, 解压后 60 KB, 包含 60,000 个标签)</li>
-<li>Test set images: t10k-images-idx3-ubyte.gz (1.6 MB, 解压后 7.8 MB, 包含 10,000 个样本)</li>
-<li>Test set labels: t10k-labels-idx1-ubyte.gz (5KB, 解压后 10 KB, 包含 10,000 个标签)</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -416,9 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/04/Lecture 4 Classification/" itemprop="url">Untitled</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -468,9 +329,7 @@
       
 
       
-        
-          
-            <p>title: Hands on Machine Learning-Chapter 3<br>date: 2019-10-01 19:52:14<br>tags: [python, Machine Learning, Sklearn]<br>categories: Hands on Machine Learning<br>toc: true</p>
+        <p>title: Hands on Machine Learning-Chapter 3<br>date: 2019-10-01 19:52:14<br>tags: [python, Machine Learning, Sklearn]<br>categories: Hands on Machine Learning<br>toc: true</p>
 <blockquote>
 <p>《Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Technique for Building Intelligent Systems》—-Chapter 3</p>
 </blockquote>
@@ -1240,8 +1099,6 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
-          
-        
       
     </div>
     
@@ -1258,170 +1115,32 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/绝对路径与相对路径/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/03/绝对路径与相对路径/" itemprop="url">绝对路径与相对路径</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-03T23:55:54-04:00">
-                2019-10-03
-              </time>
+              <a href="/2019/10/03/绝对路径与相对路径/" rel="next" title="绝对路径与相对路径">
+                <i class="fa fa-chevron-left"></i> 绝对路径与相对路径
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2019/10/04/MNIST/" rel="prev" title="MNIST">
+                MNIST <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>windows平台</p>
-<p>python中路径的表达方式：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">open(<span class="string">'xxx.txt'</span>)</span><br><span class="line">open(<span class="string">'/data/xxx.txt'</span>)</span><br><span class="line">open(<span class="string">'D:\\data\\xxx.txt'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>前两者为相对路径，第三个为绝对路径。绝对路径指的是完整的路径，相对路径指相对于当前文件夹的路径。</p>
-<p>第一个命令为打开当前文件夹内文件；</p>
-<p>第二个命令为打开当前文件夹内，data文件夹里面的txt；</p>
-<p>第三个命令为打开该路径文件。</p>
-<blockquote>
-<p>特别注意：‘/’用来表示绝对路径，’\‘用来表示相对路径，而’\\‘则是转义。网址和linux系统常用’/‘表示。</p>
-</blockquote>
-<p>获取当前文件夹的绝对路径：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">path = os.path.abspath(<span class="string">'.'</span>) <span class="comment">#当前文件夹绝对路径</span></span><br><span class="line">path = os.path.abspath(<span class="string">'..'</span>)<span class="comment">#当前文件夹的上级文件夹的绝对路径</span></span><br></pre></td></tr></table></figure>
-
-<p>特别注意：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'..'</span> <span class="comment">#表示上级文件夹</span></span><br><span class="line"><span class="string">'.'</span>  <span class="comment">#表示当前文件夹</span></span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1431,765 +1150,11 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/Hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/03/Hexo/" itemprop="url">Hexo建立博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-03T19:15:35-04:00">
-                2019-10-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>如何通过Hexo + Github 快速搭建个人Blog：</p>
-<p>Hexo 可以生成静态站点，可以把Markdown文件展示成静态页面。</p>
-<p>步骤：</p>
-<ul>
-<li>搭建本地环境</li>
-<li>建立Github Pages</li>
-<li>绑定域名</li>
-<li>经营、优化博客</li>
-</ul>
-<h1 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h1><ol>
-<li>安装 Node.js</li>
-</ol>
-<p>Hexo是使用 Node.js开发的，所以必须安装。</p>
-<ol start="2">
-<li>安装 Git</li>
-</ol>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/Next-theme/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/03/Next-theme/" itemprop="url">Next theme</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-03T18:28:58-04:00">
-                2019-10-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="如何美化NEXT主题"><a href="#如何美化NEXT主题" class="headerlink" title="如何美化NEXT主题"></a>如何美化NEXT主题</h1><h2 id="1-添加动态背景"><a href="#1-添加动态背景" class="headerlink" title="1. 添加动态背景"></a>1. 添加动态背景</h2><p>NEXT主题5.1.1版本以上内置该功能(太受欢迎)。</p>
-<p>配置文件 <code>themes/next/_config.yml</code>中找到：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Canvas-nest</span><br><span class="line">canvas_nest: false</span><br></pre></td></tr></table></figure>
-
-<p>改为：</p>
-<p><code>canvas_nest: true</code></p>
-<p>想要更改该背景的参数：</p>
-<p>文件所在位置<code>themes\next\source\lib\canvas-nest\canvas-nest.min.js</code></p>
-<p>参数说明：</p>
-<ul>
-<li><code>color</code>: 线条色彩，默认<code>&quot;0,0,0&quot;</code> 三个值分别对应（R,G,B)</li>
-<li><code>opacity</code>: 线条透明度，默认 <code>0.5</code>，取值范围 <code>0~1</code></li>
-<li><code>count</code>: 线条总数，默认<code>99</code></li>
-<li><code>zIndex</code> 该背景的z-index属性，CSS属性用于控制所在层的位置，默认<code>-1</code></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/02/读书笔记-规模-Scale/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/02/读书笔记-规模-Scale/" itemprop="url">读书笔记-规模(Scale)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-02T22:30:07-04:00">
-                2019-10-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="读《规模-复杂世界的简单法则》"><a href="#读《规模-复杂世界的简单法则》" class="headerlink" title="读《规模:复杂世界的简单法则》"></a>读《规模:复杂世界的简单法则》</h1><blockquote>
-<p>杰弗里·韦斯特. 规模:复杂世界的简单法则 中信出版集团. Kindle 版本.</p>
-</blockquote>
-<h2 id="第一章-大背景"><a href="#第一章-大背景" class="headerlink" title="第一章 大背景"></a>第一章 大背景</h2><p>世界上有超过800万种物种，形态不一。所有复杂性和多样性的背后是否有一种潜在的规律？</p>
-<p>所有迥异的高度复杂现象中，都存在着共同的概念框架————动物、植物、人类社会行为、城市与公司的活力、增长和组织事实上都遵循类似的一般规律。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/01/numpy/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/01/numpy/" itemprop="url">numpy常见命令与问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-01T03:08:15-04:00">
-                2019-10-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h6 id="np-exp"><a href="#np-exp" class="headerlink" title="np.exp()"></a>np.exp()</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">该代码等同于：$a = e^b$ 即e（自然底数）的幂次方。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">###### np.random.seed()使用详解</span><br><span class="line"></span><br><span class="line">采用一个随机数种子，使得每次的随机数一致。</span><br><span class="line"></span><br><span class="line">每次生成随机数前都需要运行一次，否则生成的随机数不一定与之前一致。</span><br><span class="line"></span><br><span class="line">随机种子的参数与随机数大小无关，只是制定了一个随机数生成的起始位置，确定位置后，后续随机数也随之固定。</span><br></pre></td></tr></table></figure>
-
-<p>import numpy as np<br>np.random.seed(20)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## 不常用命令</span><br></pre></td></tr></table></figure>
-
-<p>np.set_printoptions(threshold=np.inf)</p>
-<pre><code>
-展示整个数组，不使用省略号
-</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/28/os/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/28/os/" itemprop="url">os中常用命令和常见错误</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-28T23:13:39-04:00">
-                2019-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><ol>
-<li>返回工作路径上一级文件夹</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">os.chdir(<span class="string">'..'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>该代码每次运行都会向上一级，所以只能运行一次，否则会报错。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -2197,6 +1162,10 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
 
 
           
+
+  
+
+
 
         </div>
         
@@ -2217,8 +1186,17 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -2288,6 +1266,22 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Setup"><span class="nav-number">1.</span> <span class="nav-text">Setup</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MNIST"><span class="nav-number">2.</span> <span class="nav-text">MNIST</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Binary-classifier"><span class="nav-number">3.</span> <span class="nav-text">Binary classifier</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Confusion-Matrix"><span class="nav-number">3.1.</span> <span class="nav-text">Confusion Matrix</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ROC-curves"><span class="nav-number">4.</span> <span class="nav-text">ROC curves</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Multiclass-classification"><span class="nav-number">5.</span> <span class="nav-text">Multiclass classification</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Error-Analysis"><span class="nav-number">6.</span> <span class="nav-text">Error Analysis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Multilabel-classification"><span class="nav-number">7.</span> <span class="nav-text">Multilabel classification</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Extra-material"><span class="nav-number">8.</span> <span class="nav-text">Extra material</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dummy-ie-random-classifier"><span class="nav-number">8.1.</span> <span class="nav-text">Dummy (ie. random) classifier</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KNN-classifier"><span class="nav-number">8.2.</span> <span class="nav-text">KNN classifier</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exercise-solutions"><span class="nav-number">9.</span> <span class="nav-text">Exercise solutions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-An-MNIST-Classifier-With-Over-97-Accuracy"><span class="nav-number">9.1.</span> <span class="nav-text">1. An MNIST Classifier With Over 97% Accuracy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Data-Augmentation"><span class="nav-number">9.2.</span> <span class="nav-text">2. Data Augmentation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Tackle-the-Titanic-dataset"><span class="nav-number">9.3.</span> <span class="nav-text">3. Tackle the Titanic dataset</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Spam-classifier"><span class="nav-number">9.4.</span> <span class="nav-text">4. Spam classifier</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -2431,6 +1425,10 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -2488,26 +1486,6 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
