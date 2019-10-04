@@ -399,7 +399,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/04/Lecture 4 Classification/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/绝对路径与相对路径/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xiaoyu Lu">
@@ -418,7 +418,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/04/Lecture 4 Classification/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2019/10/03/绝对路径与相对路径/" itemprop="url">绝对路径与相对路径</a></h1>
         
 
         <div class="post-meta">
@@ -430,8 +430,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-04T00:37:41-04:00">
-                2019-10-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-03T23:55:54-04:00">
+                2019-10-03
               </time>
             
 
@@ -440,6 +440,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -470,8 +492,624 @@
       
         
           
-            <p>title: Hands on Machine Learning-Chapter 3<br>date: 2019-10-01 19:52:14<br>tags: [python, Machine Learning, Sklearn]<br>categories: Hands on Machine Learning<br>toc: true</p>
+            <p>windows平台</p>
+<p>python中路径的表达方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">open(<span class="string">'xxx.txt'</span>)</span><br><span class="line">open(<span class="string">'/data/xxx.txt'</span>)</span><br><span class="line">open(<span class="string">'D:\\data\\xxx.txt'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>前两者为相对路径，第三个为绝对路径。绝对路径指的是完整的路径，相对路径指相对于当前文件夹的路径。</p>
+<p>第一个命令为打开当前文件夹内文件；</p>
+<p>第二个命令为打开当前文件夹内，data文件夹里面的txt；</p>
+<p>第三个命令为打开该路径文件。</p>
 <blockquote>
+<p>特别注意：‘/’用来表示绝对路径，’\‘用来表示相对路径，而’\\‘则是转义。网址和linux系统常用’/‘表示。</p>
+</blockquote>
+<p>获取当前文件夹的绝对路径：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">path = os.path.abspath(<span class="string">'.'</span>) <span class="comment">#当前文件夹绝对路径</span></span><br><span class="line">path = os.path.abspath(<span class="string">'..'</span>)<span class="comment">#当前文件夹的上级文件夹的绝对路径</span></span><br></pre></td></tr></table></figure>
+
+<p>特别注意：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'..'</span> <span class="comment">#表示上级文件夹</span></span><br><span class="line"><span class="string">'.'</span>  <span class="comment">#表示当前文件夹</span></span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/Hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiaoyu Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LXY's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/03/Hexo/" itemprop="url">Hexo建立博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-03T19:15:35-04:00">
+                2019-10-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>如何通过Hexo + Github 快速搭建个人Blog：</p>
+<p>Hexo 可以生成静态站点，可以把Markdown文件展示成静态页面。</p>
+<p>步骤：</p>
+<ul>
+<li>搭建本地环境</li>
+<li>建立Github Pages</li>
+<li>绑定域名</li>
+<li>经营、优化博客</li>
+</ul>
+<h1 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h1><ol>
+<li>安装 Node.js</li>
+</ol>
+<p>Hexo是使用 Node.js开发的，所以必须安装。</p>
+<ol start="2">
+<li>安装 Git</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/Next-theme/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiaoyu Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LXY's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/03/Next-theme/" itemprop="url">Next theme</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-03T18:28:58-04:00">
+                2019-10-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Blog/" itemprop="url" rel="index">
+                    <span itemprop="name">Blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="如何美化NEXT主题"><a href="#如何美化NEXT主题" class="headerlink" title="如何美化NEXT主题"></a>如何美化NEXT主题</h1><h2 id="1-添加动态背景"><a href="#1-添加动态背景" class="headerlink" title="1. 添加动态背景"></a>1. 添加动态背景</h2><p>NEXT主题5.1.1版本以上内置该功能(太受欢迎)。</p>
+<p>配置文件 <code>themes/next/_config.yml</code>中找到：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Canvas-nest</span><br><span class="line">canvas_nest: false</span><br></pre></td></tr></table></figure>
+
+<p>改为：</p>
+<p><code>canvas_nest: true</code></p>
+<p>想要更改该背景的参数：</p>
+<p>文件所在位置<code>themes\next\source\lib\canvas-nest\canvas-nest.min.js</code></p>
+<p>参数说明：</p>
+<ul>
+<li><code>color</code>: 线条色彩，默认<code>&quot;0,0,0&quot;</code> 三个值分别对应（R,G,B)</li>
+<li><code>opacity</code>: 线条透明度，默认 <code>0.5</code>，取值范围 <code>0~1</code></li>
+<li><code>count</code>: 线条总数，默认<code>99</code></li>
+<li><code>zIndex</code> 该背景的z-index属性，CSS属性用于控制所在层的位置，默认<code>-1</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/02/读书笔记-规模-Scale/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiaoyu Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LXY's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/02/读书笔记-规模-Scale/" itemprop="url">读书笔记-规模(Scale)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-02T22:30:07-04:00">
+                2019-10-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">读书笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="读《规模-复杂世界的简单法则》"><a href="#读《规模-复杂世界的简单法则》" class="headerlink" title="读《规模:复杂世界的简单法则》"></a>读《规模:复杂世界的简单法则》</h1><blockquote>
+<p>杰弗里·韦斯特. 规模:复杂世界的简单法则 中信出版集团. Kindle 版本.</p>
+</blockquote>
+<h2 id="第一章-大背景"><a href="#第一章-大背景" class="headerlink" title="第一章 大背景"></a>第一章 大背景</h2><p>世界上有超过800万种物种，形态不一。所有复杂性和多样性的背后是否有一种潜在的规律？</p>
+<p>所有迥异的高度复杂现象中，都存在着共同的概念框架————动物、植物、人类社会行为、城市与公司的活力、增长和组织事实上都遵循类似的一般规律。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/01/Lecture 4 Classification/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xiaoyu Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LXY's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/01/Lecture 4 Classification/" itemprop="url">Hands on Machine Learning-Chapter 3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-01T19:52:14-04:00">
+                2019-10-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hands-on-Machine-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Hands on Machine Learning</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
 <p>《Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Technique for Building Intelligent Systems》—-Chapter 3</p>
 </blockquote>
 <p><em>This notebook contains all the sample code and solutions to the exercises in chapter 3.</em></p>
@@ -1287,623 +1925,6 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/绝对路径与相对路径/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/03/绝对路径与相对路径/" itemprop="url">绝对路径与相对路径</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-03T23:55:54-04:00">
-                2019-10-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>windows平台</p>
-<p>python中路径的表达方式：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">open(<span class="string">'xxx.txt'</span>)</span><br><span class="line">open(<span class="string">'/data/xxx.txt'</span>)</span><br><span class="line">open(<span class="string">'D:\\data\\xxx.txt'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>前两者为相对路径，第三个为绝对路径。绝对路径指的是完整的路径，相对路径指相对于当前文件夹的路径。</p>
-<p>第一个命令为打开当前文件夹内文件；</p>
-<p>第二个命令为打开当前文件夹内，data文件夹里面的txt；</p>
-<p>第三个命令为打开该路径文件。</p>
-<blockquote>
-<p>特别注意：‘/’用来表示绝对路径，’\‘用来表示相对路径，而’\\‘则是转义。网址和linux系统常用’/‘表示。</p>
-</blockquote>
-<p>获取当前文件夹的绝对路径：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line">path = os.path.abspath(<span class="string">'.'</span>) <span class="comment">#当前文件夹绝对路径</span></span><br><span class="line">path = os.path.abspath(<span class="string">'..'</span>)<span class="comment">#当前文件夹的上级文件夹的绝对路径</span></span><br></pre></td></tr></table></figure>
-
-<p>特别注意：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'..'</span> <span class="comment">#表示上级文件夹</span></span><br><span class="line"><span class="string">'.'</span>  <span class="comment">#表示当前文件夹</span></span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/Hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/03/Hexo/" itemprop="url">Hexo建立博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-03T19:15:35-04:00">
-                2019-10-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>如何通过Hexo + Github 快速搭建个人Blog：</p>
-<p>Hexo 可以生成静态站点，可以把Markdown文件展示成静态页面。</p>
-<p>步骤：</p>
-<ul>
-<li>搭建本地环境</li>
-<li>建立Github Pages</li>
-<li>绑定域名</li>
-<li>经营、优化博客</li>
-</ul>
-<h1 id="本地环境"><a href="#本地环境" class="headerlink" title="本地环境"></a>本地环境</h1><ol>
-<li>安装 Node.js</li>
-</ol>
-<p>Hexo是使用 Node.js开发的，所以必须安装。</p>
-<ol start="2">
-<li>安装 Git</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/03/Next-theme/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/03/Next-theme/" itemprop="url">Next theme</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-03T18:28:58-04:00">
-                2019-10-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="如何美化NEXT主题"><a href="#如何美化NEXT主题" class="headerlink" title="如何美化NEXT主题"></a>如何美化NEXT主题</h1><h2 id="1-添加动态背景"><a href="#1-添加动态背景" class="headerlink" title="1. 添加动态背景"></a>1. 添加动态背景</h2><p>NEXT主题5.1.1版本以上内置该功能(太受欢迎)。</p>
-<p>配置文件 <code>themes/next/_config.yml</code>中找到：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Canvas-nest</span><br><span class="line">canvas_nest: false</span><br></pre></td></tr></table></figure>
-
-<p>改为：</p>
-<p><code>canvas_nest: true</code></p>
-<p>想要更改该背景的参数：</p>
-<p>文件所在位置<code>themes\next\source\lib\canvas-nest\canvas-nest.min.js</code></p>
-<p>参数说明：</p>
-<ul>
-<li><code>color</code>: 线条色彩，默认<code>&quot;0,0,0&quot;</code> 三个值分别对应（R,G,B)</li>
-<li><code>opacity</code>: 线条透明度，默认 <code>0.5</code>，取值范围 <code>0~1</code></li>
-<li><code>count</code>: 线条总数，默认<code>99</code></li>
-<li><code>zIndex</code> 该背景的z-index属性，CSS属性用于控制所在层的位置，默认<code>-1</code></li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/02/读书笔记-规模-Scale/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xiaoyu Lu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LXY's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/02/读书笔记-规模-Scale/" itemprop="url">读书笔记-规模(Scale)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-02T22:30:07-04:00">
-                2019-10-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/读书笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="读《规模-复杂世界的简单法则》"><a href="#读《规模-复杂世界的简单法则》" class="headerlink" title="读《规模:复杂世界的简单法则》"></a>读《规模:复杂世界的简单法则》</h1><blockquote>
-<p>杰弗里·韦斯特. 规模:复杂世界的简单法则 中信出版集团. Kindle 版本.</p>
-</blockquote>
-<h2 id="第一章-大背景"><a href="#第一章-大背景" class="headerlink" title="第一章 大背景"></a>第一章 大背景</h2><p>世界上有超过800万种物种，形态不一。所有复杂性和多样性的背后是否有一种潜在的规律？</p>
-<p>所有迥异的高度复杂现象中，都存在着共同的概念框架————动物、植物、人类社会行为、城市与公司的活力、增长和组织事实上都遵循类似的一般规律。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/01/numpy/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2244,7 +2265,7 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2255,7 +2276,7 @@ KeyboardInterrupt: </code></pre><h1 id="Extra-material"><a href="#Extra-material
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
