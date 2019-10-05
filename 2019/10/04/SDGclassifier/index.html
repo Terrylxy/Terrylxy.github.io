@@ -79,15 +79,18 @@
 
 
 
+<meta name="description" content="SGDClassifier官方文档  梯度下降法（SGD）是一个简单有效的方法，用于判断使用凸loss函数（convex loss function）的分类器（SVM或logistic回归）。SGD被成功地应用在大规模稀疏机器学习问题上（large-scale and sparse machine learning），经常用在文本分类及自然语言处理上。假如数据是稀疏的，该模块的分类器可以轻松地解">
 <meta name="keywords" content="Machine Learning">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SDGclassifier">
 <meta property="og:url" content="http://yoursite.com/2019/10/04/SDGclassifier/index.html">
 <meta property="og:site_name" content="LXY&#39;s Blog">
+<meta property="og:description" content="SGDClassifier官方文档  梯度下降法（SGD）是一个简单有效的方法，用于判断使用凸loss函数（convex loss function）的分类器（SVM或logistic回归）。SGD被成功地应用在大规模稀疏机器学习问题上（large-scale and sparse machine learning），经常用在文本分类及自然语言处理上。假如数据是稀疏的，该模块的分类器可以轻松地解">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-04T20:10:38.893Z">
+<meta property="og:updated_time" content="2019-10-04T20:25:59.317Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SDGclassifier">
+<meta name="twitter:description" content="SGDClassifier官方文档  梯度下降法（SGD）是一个简单有效的方法，用于判断使用凸loss函数（convex loss function）的分类器（SVM或logistic回归）。SGD被成功地应用在大规模稀疏机器学习问题上（large-scale and sparse machine learning），经常用在文本分类及自然语言处理上。假如数据是稀疏的，该模块的分类器可以轻松地解">
 
 
 
@@ -350,7 +353,33 @@
       
 
       
-        
+        <blockquote>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html" target="_blank" rel="noopener">SGDClassifier官方文档</a></p>
+</blockquote>
+<p>梯度下降法（SGD）是一个简单有效的方法，用于判断使用凸loss函数（convex loss function）的分类器（SVM或logistic回归）。SGD被成功地应用在大规模稀疏机器学习问题上（large-scale and sparse machine learning），经常用在文本分类及自然语言处理上。假如数据是稀疏的，该模块的分类器可以轻松地解决这样的问题：超过10^5的训练样本、超过10^5的features。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.SGDClassifier(loss=’hinge’, penalty=’l2’, alpha=<span class="number">0.0001</span>, l1_ratio=<span class="number">0.15</span>, fit_intercept=<span class="literal">True</span>, </span><br><span class="line">max_iter=<span class="literal">None</span>, tol=<span class="literal">None</span>, shuffle=<span class="literal">True</span>, verbose=<span class="number">0</span>, epsilon=<span class="number">0.1</span>, n_jobs=<span class="literal">None</span>, random_state=<span class="literal">None</span>, </span><br><span class="line">learning_rate=’optimal’, eta0=<span class="number">0.0</span>, power_t=<span class="number">0.5</span>, early_stopping=<span class="literal">False</span>, validation_fraction=<span class="number">0.1</span>, n_iter_no_change=<span class="number">5</span>, class_weight=<span class="literal">None</span>, warm_start=<span class="literal">False</span>, average=<span class="literal">False</span>, n_iter=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+
+<p>SGD的优点是：</p>
+<ul>
+<li>高效</li>
+<li>容易实现（有许多机会进行代码调优）</li>
+</ul>
+<p>SGD的缺点是：</p>
+<ul>
+<li>SGD需要许多超参数：比如正则项参数、迭代数。</li>
+<li>SGD对于特征归一化（feature scaling）是敏感的。</li>
+</ul>
+<p>注意：SGD是一种优化方法，不是分类算法，SGDClassifier函数实际使用的是SVM或logistic回归算法进行分类！！！</p>
+<p>介绍SGDClassifier内的几个重要参数：</p>
+<ol>
+<li>损失函数loss，有三种选择，对应不同分类算法</li>
+</ol>
+<p>loss=”hinge”: (soft-margin)线性SVM.<br>loss=”modified_huber”: 带平滑的hinge loss.<br>loss=”log”: logistic回归</p>
+<ol start="2">
+<li>通过penalty参数，可以设置对应的惩罚项。SGD支持下面的罚项：</li>
+</ol>
+<p>penalty=”l2”: 对coef_的L2范数罚项（岭回归）<br>penalty=”l1”: 对coef_的L1范数罚项（套索回归）<br>penalty=”elasticnet”: L2和L1的convex组合; (1 - l1_ratio) * L2 + l1_ratio * L1 （弹性网络）<br>正则化器是对损失函数添加的惩罚，其使用平方欧几里德范数L2或绝对范数L1或两者的组合（弹性网络）将模型参数缩减到零向量。更多参考：<a href="http://d0evi1.com/sklearn/sgd/" target="_blank" rel="noopener">http://d0evi1.com/sklearn/sgd/</a></p>
+
       
     </div>
     
@@ -460,7 +489,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -471,7 +500,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
