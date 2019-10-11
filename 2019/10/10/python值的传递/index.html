@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LXY&#39;s Blog">
 <meta property="og:description" content="How does objective be passed in Python?这几天学习Python和帮同学解决问题中遇到了一个神奇的小问题。 如果指定一个list为a，运行b=a，对b做更改，a的值也会同样更改。这引起了我深入了解python中值的传递的深层原理。  python中一切皆对象，这句话刚开始学习的时候并没有任何感觉。 但随着深入了解编程，python的确大不同于C或者java。所以">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-11T00:37:14.295Z">
+<meta property="og:updated_time" content="2019-10-11T02:45:41.473Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python值的传递">
 <meta name="twitter:description" content="How does objective be passed in Python?这几天学习Python和帮同学解决问题中遇到了一个神奇的小问题。 如果指定一个list为a，运行b=a，对b做更改，a的值也会同样更改。这引起了我深入了解python中值的传递的深层原理。  python中一切皆对象，这句话刚开始学习的时候并没有任何感觉。 但随着深入了解编程，python的确大不同于C或者java。所以">
@@ -355,6 +355,8 @@
 <li><p>immutable包含bool, int, float, tuple, str, frozenset</p>
 </li>
 </ol>
+<a id="more"></a>
+
 <p>先看几个例子：</p>
 <h2 id="immutable"><a href="#immutable" class="headerlink" title="immutable"></a>immutable</h2><p>看一下int：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">x = 1</span><br><span class="line">y = x</span><br><span class="line">print(&quot;x : &quot;,x,&quot; ID of x :&quot;,id(x))</span><br><span class="line">print(&quot;y ：&quot;,y,&quot; ID of y :&quot;,id(y))</span><br><span class="line"></span><br><span class="line">y += 1</span><br><span class="line">print(&quot;y ：&quot;,y,&quot; ID of y :&quot;,id(y))</span><br><span class="line"></span><br><span class="line">z = 2 # a new variable z equals to 2</span><br><span class="line">print(&quot;z ：&quot;,z,&quot; ID of z :&quot;,id(z))</span><br><span class="line"></span><br><span class="line">print(&quot;ID of 1 :&quot;,id(1))</span><br><span class="line">print(&quot;ID of 2 :&quot;,id(2))</span><br><span class="line"></span><br><span class="line"># out:</span><br><span class="line"></span><br><span class="line">x :  1  ID of x : 140727198257984</span><br><span class="line">y :  1  ID of y : 140727198257984</span><br><span class="line"></span><br><span class="line">y :  2  ID of y : 140727198258016</span><br><span class="line"></span><br><span class="line">z :  2  ID of z : 140727198258016</span><br><span class="line">ID of 1 : 140727198257984</span><br><span class="line">ID of 2 : 140727198258016</span><br></pre></td></tr></table></figure>

@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LXY&#39;s Blog">
 <meta property="og:description" content="SGDClassifier官方文档  梯度下降法（SGD）是一个简单有效的方法，用于判断使用凸loss函数（convex loss function）的分类器（SVM或logistic回归）。SGD被成功地应用在大规模稀疏机器学习问题上（large-scale and sparse machine learning），经常用在文本分类及自然语言处理上。假如数据是稀疏的，该模块的分类器可以轻松地解">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-04T20:25:59.317Z">
+<meta property="og:updated_time" content="2019-10-11T02:46:46.609Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SDGclassifier">
 <meta name="twitter:description" content="SGDClassifier官方文档  梯度下降法（SGD）是一个简单有效的方法，用于判断使用凸loss函数（convex loss function）的分类器（SVM或logistic回归）。SGD被成功地应用在大规模稀疏机器学习问题上（large-scale and sparse machine learning），经常用在文本分类及自然语言处理上。假如数据是稀疏的，该模块的分类器可以轻松地解">
@@ -357,6 +357,8 @@
 <p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.SGDClassifier.html" target="_blank" rel="noopener">SGDClassifier官方文档</a></p>
 </blockquote>
 <p>梯度下降法（SGD）是一个简单有效的方法，用于判断使用凸loss函数（convex loss function）的分类器（SVM或logistic回归）。SGD被成功地应用在大规模稀疏机器学习问题上（large-scale and sparse machine learning），经常用在文本分类及自然语言处理上。假如数据是稀疏的，该模块的分类器可以轻松地解决这样的问题：超过10^5的训练样本、超过10^5的features。</p>
+<a id="more"></a>
+
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sklearn.linear_model.SGDClassifier(loss=’hinge’, penalty=’l2’, alpha=<span class="number">0.0001</span>, l1_ratio=<span class="number">0.15</span>, fit_intercept=<span class="literal">True</span>, </span><br><span class="line">max_iter=<span class="literal">None</span>, tol=<span class="literal">None</span>, shuffle=<span class="literal">True</span>, verbose=<span class="number">0</span>, epsilon=<span class="number">0.1</span>, n_jobs=<span class="literal">None</span>, random_state=<span class="literal">None</span>, </span><br><span class="line">learning_rate=’optimal’, eta0=<span class="number">0.0</span>, power_t=<span class="number">0.5</span>, early_stopping=<span class="literal">False</span>, validation_fraction=<span class="number">0.1</span>, n_iter_no_change=<span class="number">5</span>, class_weight=<span class="literal">None</span>, warm_start=<span class="literal">False</span>, average=<span class="literal">False</span>, n_iter=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
 
 <p>SGD的优点是：</p>

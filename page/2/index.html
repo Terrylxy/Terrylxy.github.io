@@ -268,7 +268,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/10/01/numpy/" itemprop="url">numpy常见命令与问题</a></h1>
+                <a class="post-title-link" href="/2019/10/01/numpy/" itemprop="url">numpy常用函数与常见问题</a></h1>
         
 
         <div class="post-meta">
@@ -341,30 +341,14 @@
 
       
         
-          
-            <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h6 id="np-exp"><a href="#np-exp" class="headerlink" title="np.exp()"></a>np.exp()</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">该代码等同于：$a = e^b$ 即e（自然底数）的幂次方。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">###### np.random.seed()</span><br><span class="line"></span><br><span class="line">采用一个随机数种子，使得每次的随机数一致。</span><br><span class="line"></span><br><span class="line">每次生成随机数前都需要运行一次，否则生成的随机数不一定与之前一致。</span><br><span class="line"></span><br><span class="line">随机种子的参数与随机数大小无关，只是制定了一个随机数生成的起始位置，确定位置后，后续随机数也随之固定。</span><br></pre></td></tr></table></figure>
-
-<p>import numpy as np<br>np.random.seed(20)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">###### np.around</span><br><span class="line"></span><br><span class="line">np.around(a, decimals = 0, out=None ) #四舍五入</span><br><span class="line"></span><br><span class="line">默认到整数，正数位小数点后第N位，负数为小数点前第N位。</span><br><span class="line"></span><br><span class="line">Out默认类型与a相同。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## nparray 操作</span><br><span class="line"></span><br><span class="line">#### 条件筛选</span><br><span class="line"></span><br><span class="line">1. 按某些固定值筛选</span><br><span class="line"></span><br><span class="line">```python</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">arr = np.array([1, 1, 1, 134, 45, 3, 46, 45, 65, 3, 23424, 234, 12, 12, 3, 546, 1, 2])</span><br><span class="line">print(np.where(arr==3))</span><br><span class="line">print(arr[np.where(arr == 3)])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">(array([ 5,  9, 14], dtype=int32),)</span><br><span class="line">[3 3 3]</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>按多个固定值筛选</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">arr = np.array([1, 1, 1, 134, 45, 3, 46, 45, 65, 3, 23424, 234, 12, 12, 3, 546, 1, 2])</span><br><span class="line">print(np.where((arr == 3) | (arr == 1)))</span><br><span class="line">print(arr[np.where((arr == 3) | (arr == 1))])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">(array([ 0,  1,  2,  5,  9, 14, 16], dtype=int32),)</span><br><span class="line">[1 1 1 3 3 3 1]</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>按范围筛选</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">arr = np.array([1, 1, 1, 134, 45, 3, 46, 45, 65, 3, 23424, 234, 12, 12, 3, 546, 1, 2])</span><br><span class="line">print(np.where(arr &gt; 3))</span><br><span class="line">print(arr[np.where(arr &gt; 3)])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">(array([ 3,  4,  6,  7,  8, 10, 11, 12, 13, 15], dtype=int32),)</span><br><span class="line">[  134    45    46    45    65 23424   234    12    12   546]</span><br></pre></td></tr></table></figure>
-
-<p>若不需要index</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">arr = np.array([1, 1, 1, 134, 45, 3, 46, 45, 65, 3, 23424, 234, 12, 12, 3, 546, 1, 2])</span><br><span class="line">print(arr[arr &gt; 3])</span><br><span class="line"></span><br><span class="line">Output:</span><br><span class="line">[  134    45    46    45    65 23424   234    12    12   546]</span><br></pre></td></tr></table></figure>
-
-<h2 id="不常用命令"><a href="#不常用命令" class="headerlink" title="不常用命令"></a>不常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.set_printoptions(threshold=np.inf)</span><br></pre></td></tr></table></figure>
-
-<p>展示整个数组，不使用省略号</p>
-
-          
+          numpy包常用函数与常见问题
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/01/numpy/">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
